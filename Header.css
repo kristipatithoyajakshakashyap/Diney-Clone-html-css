@@ -1,0 +1,125 @@
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #090b13;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+    z-index: 1;
+}
+
+.logo{
+    padding:  0px;
+    width: 80px;
+    margin-top: 4px;
+    max-height: 70px;
+    font-size:0;
+    display: inline-block;
+}
+
+.logo > img{
+        display: block;
+        width: 100%;
+}
+
+.navList{
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    justify-content: flex-end;
+    margin: 0;
+    padding:0;
+    position: relative;
+    margin-right: auto;
+    margin-left: 25px;
+    font-weight: 600;
+}
+
+.navList > a{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.navList > a > img{
+    height: 15px;
+    min-width: 20px;
+    width: 20px;
+    z-index: auto;
+}
+
+.navList > a > span{
+    color: rgb(249, 249, 249);
+    font-size: 10px;
+    
+    line-height: 1.08;
+    padding: 2px 0px;
+    white-space: nowrap;
+    position: relative;
+}
+
+
+.navList > a >span:after {
+    border-radius: 1em;
+    border-top: .1em solid #fff;
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: .14em;
+    left: 0;
+    transition: right .4s cubic-bezier(0, .5, 0, 1);
+}
+
+.navList > a > span:hover:after {
+    right: 0;
+}
+.signOut{
+    position: relative;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.signOut > img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.dropDown{
+    position: absolute;
+    top: 48px;
+    right: 0px;
+    background: rgb(19, 19, 19);
+    border:1px solid rgba(151, 151, 151, 0.34);
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 /50%) 0px 0px 0px 18px 0px;
+    padding: 10px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    width: 100px;
+    opacity: 0;
+    color: white;
+}
+
+
+
+.signOut:hover > .dropDown{
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+@media screen and (max-width: 768px){
+    .navList{
+        display: none;
+    }
+}
